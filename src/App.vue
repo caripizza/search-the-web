@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <Home msg="Welcome to the API search app!"/>
+    <p>
+      <a href="https://newsapi.org" target="_blank">Powered by News API</a>
+    </p>
   </div>
 </template>
 
