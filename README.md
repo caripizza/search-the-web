@@ -1,29 +1,9 @@
-# search-the-web
+# Search the web app
 
-## Project setup
-```
-npm install
-```
+## by Cari Palazzolo @caripizza
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Description
+This app uses fetch and VueJS to search and fetch data from a third-party API.
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Technologies Used
+Vue CLI, JavaScript, HTML, CSS
