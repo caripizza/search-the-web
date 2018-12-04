@@ -20,9 +20,11 @@ import NewsSearch from './NewsSearch';
 
 export default {
   data() {
+    const search = this.$route.query.search;
     return {
       news: null,
-      search: ''
+      search: search ? decodeURIComponent(search) : ''
+      // search: ''
     };
   },
   components: {
@@ -33,7 +35,12 @@ export default {
     this.searchNews();
   },
   watch: {
-
+    $route(newRoute, oldRoute) {
+      const newSearch = newRoute.query.search;
+      const oldSearch = oldRoute.query.search;
+      if(newSearch === oldSearch) return;
+      this.handleSearch(newSearch);
+    }
   },
   methods: {
     handleSearch(search) {
@@ -43,7 +50,6 @@ export default {
     searchNews() {
       api.getNews(this.search)
         .then(response => {
-        // console.log(response.articles);
           this.news = response.articles;
         });
     }

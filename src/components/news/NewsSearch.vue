@@ -16,16 +16,21 @@ export default {
       keyword: this.search || ''
     };
   },
-  //   watch: {
-  //     search(newSearch) {
-  //       if(this.keyword !== newSearch) {
-  //         this.keyword = newSearch;
-  //       }
-  //     }
-  //   },
+  watch: {
+    search(newSearch) {
+      if(this.keyword !== newSearch) {
+        this.keyword = newSearch;
+      }
+    }
+  },
   methods: {
     handleSubmit() {
-      this.onSearch(this.keyword);
+      // this.onSearch(this.keyword);
+      this.$router.push({
+        query: {
+          search: encodeURIComponent(this.keyword)
+        }
+      });
     }
   }
 };

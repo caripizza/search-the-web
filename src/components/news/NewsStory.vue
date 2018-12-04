@@ -1,6 +1,6 @@
 <template>
-    <li>
-        {{newsItem}}
+    <li v-if="newsItem">
+        {{newsItem.title}}
     </li>
 </template>
 
