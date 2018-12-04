@@ -16,6 +16,7 @@ export default {
 <style scoped>
 li {
   text-align: left;
+  list-style: none;
 }
 h4 {
   margin: 0px;

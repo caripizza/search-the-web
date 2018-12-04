@@ -8,12 +8,12 @@
     </pre>
     <p v-if="search">Searching for &quot;{{ search }}&quot;</p>
     <div>
-      <ol v-if="news">
+      <ul v-if="news">
         <NewsStory v-for="(newsItem, i) in news"
           :key="i"
           :newsItem="newsItem"/>
         <NewsStory/>
-      </ol>
+      </ul>
     </div>
   </section>
 </template>
@@ -31,9 +31,7 @@ export default {
       news: null,
       loading: false,
       error: null,
-      search: search ? decodeURIComponent(search) : '',
-      // search: decodeURIComponent(this.$route.query.search),
-      total: 0
+      search: search ? decodeURIComponent(search) : ''
     };
   },
   components: {
