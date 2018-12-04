@@ -1,15 +1,15 @@
 <template>
   <section>
-    <h1>{{ msg }}</h1>
+    <h1>Welcome to the API search app!</h1>
   </section>
 </template>
 
 <script>
 export default {
   name: 'Home',
-  props: {
-    msg: String
-  }
+  // props: {
+  //   msg: String
+  // }
 };
 </script>
 

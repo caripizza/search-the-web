@@ -1,13 +1,13 @@
 <template>
     <li>
-        {{news}}
+        {{newsItem.title}}
     </li>
 </template>
 
 <script>
 export default {
   props: {
-    news: Object
+    newsItem: Object
   }
 };
 </script>

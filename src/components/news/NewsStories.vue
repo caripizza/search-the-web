@@ -1,29 +1,33 @@
 <template>
-    <div>
-        <ul v-if="news">
-        <NewsStory v-for="(newsStory, i) in newsStories"
-          :key="i"
-          :newsStory="newsStory"
-        />
-        </ul>
-    </div>
+  <div>
+    <ul v-if="news">
+      <NewsStory v-for="(newsItem, i) in news"
+        :key="i"
+        :newsItem="newsItem"/>
+      <NewsStory/>
+    </ul>
+  </div>
 </template>
 
 <script>
 import api from '../../services/api.js';
-// import NewsStory from './NewsStory';
+import NewsStory from './NewsStory';
 
 export default {
   data() {
     return {
-      news: null
+      news: Array
     };
   },
-  // components: {
-  //   NewsStory
-  // },
+  components: {
+    NewsStory
+  },
   created() {
-    api.getNews();
+    api.getNews()
+      .then(response => {
+        // console.log(response.articles);
+        this.news = response.articles;
+      });
   }
 };
 </script>

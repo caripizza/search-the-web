@@ -1,10 +1,11 @@
 <template>
   <div id="app">
-    <Home msg="Welcome to the API search app!"/>
+    <header>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/news">News</RouterLink>
       </nav>
+    </header>
     <main>
       <RouterView></RouterView>
     </main>
@@ -15,12 +16,12 @@
 </template>
 
 <script>
-import Home from './components/home/Home';
+// import Home from './components/home/Home';
 
 export default {
   name: 'app',
   components: {
-    Home
+    // Home
   }
 };
 </script>

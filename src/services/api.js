@@ -7,9 +7,9 @@ export default {
     //     console.log('fetch complete', response);
     //   });
 
-      .then(response => response.json())
-      .then(news => {
-        console.log(news);
-      });
+      .then(response => response.json());
+    //   .then(news => {
+    //     console.log(news);
+    //   });
   }
 };
