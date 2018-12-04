@@ -1,6 +1,6 @@
 <template>
     <li>
-        {{newsItem.title}}
+        {{newsItem}}
     </li>
 </template>
 
