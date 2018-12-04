@@ -1,12 +1,15 @@
-var url = 'https://newsapi.org/v2/everything?' +
-          'q=Apple&' +
-          'from=2018-12-03&' +
-          'sortBy=popularity&' +
-          'apiKey=249ab959bc50472b8f9bc61d6919eb9e';
+export default {
+  getNews() {
+    // eslint-disable-next-line
+    const APIKEY = process.env.VUE_APP_APIKEY;
+    return fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${APIKEY}`)
+    //   .then(response => {
+    //     console.log('fetch complete', response);
+    //   });
 
-var req = new Request(url);
-
-fetch(req)
-  .then(function(response) {
-    console.log(response.json());
-  });
+      .then(response => response.json())
+      .then(news => {
+        console.log(news);
+      });
+  }
+};
