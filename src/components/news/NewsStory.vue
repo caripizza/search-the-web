@@ -1,6 +1,7 @@
 <template>
     <li v-if="newsItem">
-        {{newsItem.title}}
+        <a :href="newsItem.url" target="_blank"><h4>{{newsItem.title}}</h4></a>
+        <p>{{newsItem.description}}</p>
     </li>
 </template>
 
@@ -12,6 +13,14 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped>
+li {
+  text-align: left;
+}
+h4 {
+  margin: 0px;
+}
+p {
+  margin: 0px;
+}
 </style>

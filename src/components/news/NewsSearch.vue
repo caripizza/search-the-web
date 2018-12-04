@@ -25,7 +25,6 @@ export default {
   },
   methods: {
     handleSubmit() {
-      // this.onSearch(this.keyword);
       this.$router.push({
         query: {
           search: encodeURIComponent(this.keyword)

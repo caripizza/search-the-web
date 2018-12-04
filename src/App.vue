@@ -6,24 +6,17 @@
         <RouterLink to="/news">News</RouterLink>
       </nav>
     </header>
+
     <main>
       <RouterView></RouterView>
     </main>
-    <footer>
+
       <a href="https://newsapi.org" target="_blank">Powered by News API</a>
-    </footer>
   </div>
 </template>
 
 <script>
-// import Home from './components/home/Home';
-
-export default {
-  name: 'app',
-  components: {
-    // Home
-  }
-};
+export default {};
 </script>
 
 <style>
